@@ -170,8 +170,8 @@
 
     api.quote_data = function(stock, callback){
       return _request.get({
-          uri: _endpoints.quote_data,
-          qs: { 'symbols': stock }
+          uri: _endpoints.quotes + stock + '/',  // TODO: change on repo
+          gzip: true
         }, callback);
     };
 
